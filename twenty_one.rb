@@ -256,9 +256,13 @@ class TwentyOne
     answer == 'y'
   end
 
+  def clear_screen
+    system('clear') || system('cls')
+  end
+
   def start
     loop do
-      system 'clear'
+      clear_screen
       deal_cards
       show_flop
 
